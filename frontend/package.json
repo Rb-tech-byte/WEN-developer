@@ -1,0 +1,21 @@
+{
+  "name": "ak23-studio-kits-mic-test-lab",
+  "version": "1.0.0",
+  "description": "AK23 Studio Kits - Mic Test Lab Feature",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-router-dom": "^7.15.1",
+    "wavesurfer.js": "^7.8.17"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "vite": "^8.0.13"
+  }
+}

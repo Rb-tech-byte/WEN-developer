@@ -1,0 +1,235 @@
+.mic-details-page {
+  min-height: 100vh;
+  padding: var(--spacing-xl) 0 var(--spacing-3xl);
+}
+
+.mic-details-skeleton {
+  height: 600px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-sm);
+  color: var(--text-gray);
+  margin-bottom: var(--spacing-xl);
+}
+
+.breadcrumb a {
+  color: var(--text-gray);
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb span:last-child {
+  color: var(--text-white);
+}
+
+.mic-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.mic-details-image {
+  position: relative;
+  aspect-ratio: 4/3;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.mic-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-gray-dark);
+}
+
+.mic-image-placeholder svg {
+  width: 120px;
+  height: 120px;
+}
+
+.featured-badge {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--text-white);
+  font-size: var(--font-xs);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mic-details-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.mic-info-header {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.mic-brand {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--primary-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mic-type {
+  font-size: var(--font-sm);
+  color: var(--text-gray);
+}
+
+.mic-type::before {
+  content: '•';
+  margin-right: var(--spacing-sm);
+  color: var(--text-gray-dark);
+}
+
+.mic-details-info h1 {
+  margin-bottom: var(--spacing-md);
+}
+
+.mic-price {
+  font-size: var(--font-3xl);
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: var(--spacing-lg);
+}
+
+.mic-short-description {
+  font-size: var(--font-lg);
+  color: var(--text-gray);
+  margin-bottom: var(--spacing-md);
+}
+
+.mic-full-description {
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-xl);
+}
+
+.mic-specs {
+  margin-bottom: var(--spacing-xl);
+}
+
+.mic-specs h3 {
+  font-size: var(--font-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.spec-label {
+  font-size: var(--font-sm);
+  color: var(--text-gray-dark);
+}
+
+.spec-value {
+  font-size: var(--font-base);
+  color: var(--text-white);
+  font-weight: 500;
+}
+
+.mic-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: auto;
+}
+
+.mic-actions .btn {
+  flex: 1;
+  justify-content: center;
+}
+
+.mic-actions .btn.active {
+  background: var(--primary);
+  color: var(--text-white);
+}
+
+/* Audio Tests Section */
+.audio-tests-section {
+  padding: var(--spacing-2xl);
+  background: linear-gradient(135deg, rgba(26, 26, 34, 0.6) 0%, rgba(15, 15, 19, 0.6) 100%);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.audio-tests-section h2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.section-description {
+  color: var(--text-gray);
+  margin-bottom: var(--spacing-lg);
+}
+
+.audio-tests-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.page-footer {
+  text-align: center;
+}
+
+.not-found {
+  text-align: center;
+  padding: var(--spacing-3xl);
+}
+
+.not-found h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+@media (max-width: 1024px) {
+  .mic-details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mic-details-image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mic-actions {
+    flex-direction: column;
+  }
+  
+  .audio-tests-section {
+    padding: var(--spacing-lg);
+  }
+}

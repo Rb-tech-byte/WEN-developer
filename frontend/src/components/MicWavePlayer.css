@@ -1,0 +1,143 @@
+.mic-wave-player {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  transition: all var(--transition-normal);
+}
+
+.mic-wave-player:hover {
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.mic-wave-player-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.mic-wave-player-label {
+  font-size: var(--font-base);
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+.mic-wave-player-type {
+  font-size: var(--font-sm);
+  color: var(--text-gray);
+  text-transform: capitalize;
+}
+
+.mic-wave-player-waveform {
+  position: relative;
+  height: 80px;
+  background: var(--bg-dark);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.mic-wave-player-container {
+  width: 100%;
+  height: 100%;
+}
+
+.mic-wave-player-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-dark);
+}
+
+.waveform-bars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 40px;
+}
+
+.waveform-bars span {
+  width: 3px;
+  height: 100%;
+  border-radius: 2px;
+  animation: waveform-pulse 1s ease-in-out infinite;
+}
+
+@keyframes waveform-pulse {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.mic-wave-player-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.mic-wave-player-play-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border: none;
+  border-radius: var(--radius-full);
+  color: var(--text-white);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+}
+
+.mic-wave-player-play-btn:hover:not(:disabled) {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.5);
+}
+
+.mic-wave-player-play-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mic-wave-player-play-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.mic-wave-player-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.mic-wave-player-current {
+  color: var(--text-white);
+  font-weight: 600;
+}
+
+.mic-wave-player-separator {
+  color: var(--text-gray-dark);
+}
+
+.mic-wave-player-duration {
+  color: var(--text-gray);
+}
+
+/* Audio player demo state */
+.mic-wave-player.demo {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.mic-wave-player.demo .mic-wave-player-play-btn {
+  background: var(--bg-card-hover);
+}

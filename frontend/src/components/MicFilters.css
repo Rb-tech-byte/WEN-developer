@@ -1,0 +1,80 @@
+.mic-filters {
+  position: sticky;
+  top: 100px;
+}
+
+.filter-group {
+  margin-bottom: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.filter-group:last-child {
+  border-bottom: none;
+}
+
+.filter-title {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--spacing-md);
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.filter-checkbox:hover {
+  background: rgba(168, 85, 247, 0.1);
+}
+
+.filter-checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+}
+
+.filter-checkbox span:not(.filter-count) {
+  font-size: var(--font-sm);
+  color: var(--text-white);
+}
+
+.filter-count {
+  font-size: var(--font-xs);
+  color: var(--text-gray-dark);
+}
+
+.price-range {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.price-input {
+  flex: 1;
+  min-width: 0;
+}
+
+.price-separator {
+  color: var(--text-gray-dark);
+}
+
+@media (max-width: 1024px) {
+  .mic-filters {
+    position: static;
+  }
+}

@@ -1,0 +1,44 @@
+.mic-test-landing {
+  min-height: 100vh;
+}
+
+.cta-section {
+  text-align: center;
+  padding: var(--spacing-3xl);
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(124, 58, 237, 0.05) 100%);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border);
+}
+
+.cta-section h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.cta-section p {
+  max-width: 500px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.cta-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.headphones-warning {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: var(--radius-md);
+  color: var(--primary-light);
+  font-size: var(--font-sm);
+  font-weight: 500;
+}
+
+.headphones-warning svg {
+  flex-shrink: 0;
+}
